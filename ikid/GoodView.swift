@@ -8,10 +8,75 @@
 import SwiftUI
 
 struct GoodView: View {
+    @State private var flipped: Bool = false
+    @State private var flashcardRotation = 0.0
+    @State private var contentRotation = 0.0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.white)
+                    .shadow(radius: 10)
+                
+                VStack {
+                    Spacer()
+                    
+                    if flipped {
+                        Text("Guardians of the galaxy")
+                            .font(.title3)
+                            .foregroundStyle(.black)
+                    } else {
+                        Text("What do you call the security guards for Samsung?")
+                            .font(.title3)
+                            .foregroundStyle(.black)
+                    }
+                    
+                    Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            flipFlashCard()
+                        }) {
+                            Text("Next")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                        .frame(width: 80, height: 40)
+                    }
+                }
+                .padding(20)
+                .multilineTextAlignment(.center)
+            }
+            .frame(width: 300, height: 240)
+            .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
+            .onTapGesture {
+                flipFlashCard()
+            }
+            .rotation3DEffect(
+                .degrees(flashcardRotation),
+                axis: (x: 0.0, y: 1.0, z: 0.0)
+            )
+        }
+    }
+    
+    func flipFlashCard() {
+        let animationTime = 0.5
+        withAnimation(Animation.linear(duration: animationTime)) {
+            flashcardRotation += 180
+        }
+        
+        withAnimation(Animation.linear(duration: 0.001).delay(animationTime/2)) {
+            flashcardRotation += 180
+            flipped.toggle()
+        }
     }
 }
+
 
 #Preview {
     GoodView()

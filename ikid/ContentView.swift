@@ -7,15 +7,32 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.separator
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)], for: .selected)
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            
+            GoodView()
+                .tabItem {
+                    Label("Good", systemImage: "")                }
+            
+            PunView()
+                .tabItem {
+                    Label("Pun", systemImage: "")
+                }
+            
+            DadView()
+                .tabItem {
+                    Label("Dad", systemImage: "")
+                }
+            
         }
-        .padding()
     }
 }
 

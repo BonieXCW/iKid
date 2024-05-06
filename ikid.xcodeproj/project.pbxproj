@@ -14,6 +14,9 @@
 		DB02DA532BE02D8A008A22AB /* ikidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA522BE02D8A008A22AB /* ikidTests.swift */; };
 		DB02DA5D2BE02D8A008A22AB /* ikidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA5C2BE02D8A008A22AB /* ikidUITests.swift */; };
 		DB02DA5F2BE02D8A008A22AB /* ikidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA5E2BE02D8A008A22AB /* ikidUITestsLaunchTests.swift */; };
+		DB02DA6E2BE02FE4008A22AB /* PunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA6D2BE02FE4008A22AB /* PunView.swift */; };
+		DB02DA702BE03086008A22AB /* DadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA6F2BE03086008A22AB /* DadView.swift */; };
+		DB02DA722BE030AD008A22AB /* GoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02DA712BE030AD008A22AB /* GoodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DB02DA582BE02D8A008A22AB /* ikidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ikidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB02DA5C2BE02D8A008A22AB /* ikidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikidUITests.swift; sourceTree = "<group>"; };
 		DB02DA5E2BE02D8A008A22AB /* ikidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB02DA6D2BE02FE4008A22AB /* PunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunView.swift; sourceTree = "<group>"; };
+		DB02DA6F2BE03086008A22AB /* DadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadView.swift; sourceTree = "<group>"; };
+		DB02DA712BE030AD008A22AB /* GoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				DB02DA412BE02D88008A22AB /* ikidApp.swift */,
 				DB02DA432BE02D88008A22AB /* ContentView.swift */,
+				DB02DA712BE030AD008A22AB /* GoodView.swift */,
+				DB02DA6D2BE02FE4008A22AB /* PunView.swift */,
+				DB02DA6F2BE03086008A22AB /* DadView.swift */,
 				DB02DA452BE02D8A008A22AB /* Assets.xcassets */,
 				DB02DA472BE02D8A008A22AB /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB02DA702BE03086008A22AB /* DadView.swift in Sources */,
+				DB02DA722BE030AD008A22AB /* GoodView.swift in Sources */,
 				DB02DA442BE02D88008A22AB /* ContentView.swift in Sources */,
+				DB02DA6E2BE02FE4008A22AB /* PunView.swift in Sources */,
 				DB02DA422BE02D88008A22AB /* ikidApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
